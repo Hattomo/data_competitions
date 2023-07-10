@@ -1,25 +1,30 @@
 {
-	"name": "poetry3-poetry-pyenv",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
-	"runArgs": [
-		"--gpus",
-		"all"
-	],
+	"name": "data_competitions",
+	// "build": {
+	// 	"dockerfile": "Dockerfile"
+	// },
+	// "runArgs": [
+	// 	"--gpus",
+	// 	"all"
+	// ],
 
 	// 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
 	// "features": {},
-
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "datacompetitions",
+	"workspaceFolder": "/workspaces/datacompetitions",
+	"overrideCommand": true,
 	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
 	// 👇 Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "",
 
-	"mounts": [
-		"source=/home/hattori/users/hattori/dataset,target=/workspaces/dataset,type=bind"
-	],
+	// "mounts": [
+	// 	"source=/home/hattori/users/hattori/dataset,target=/workspaces/dataset,type=bind"
+	// ],
 
 	// 👇 Configure tool-specific properties.
 	"customizations": {

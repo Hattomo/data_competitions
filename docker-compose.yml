@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  datacompetitions:
+    image: datacompetitions
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            capabilities: [gpu]
+            count: all
+    volumes:
+      - type: bind
+        source: ./
+        target: /workspaces/datacompetitions
+      - type: bind
+        source: ~/users/hattori/dataset
+        target: /workspaces/dataset

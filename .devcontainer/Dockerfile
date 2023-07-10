@@ -1,8 +1,8 @@
 FROM mcr.microsoft.com/devcontainers/base:jammy
-# FROM mcr.microsoft.com/devcontainers/base:jammy
 
 ARG DEBIAN_FRONTEND=noninteractive
 ARG USER=vscode
+ENV TZ="Asia/Tokyo"
 
 RUN DEBIAN_FRONTEND=noninteractive \
     && apt-get update \
