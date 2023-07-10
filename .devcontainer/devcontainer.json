@@ -26,6 +26,8 @@
 	// 	"source=/home/hattori/users/hattori/dataset,target=/workspaces/dataset,type=bind"
 	// ],
 
+	"postCreateCommand": "sudo chmod +x ./postCreate.sh",
+
 	// 👇 Configure tool-specific properties.
 	"customizations": {
         "vscode": {
