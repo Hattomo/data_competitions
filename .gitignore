@@ -187,3 +187,7 @@ dataset/
 
 *.pdf
 *.log
+
+.hydra/
+outputs/
+mlruns/

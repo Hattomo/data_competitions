@@ -41,10 +41,15 @@ poetry add pytest --group dev
 poetry add yapf --group dev
 poetry add pylint --group dev
 ```
-# activate/deactivate poetry environment
+## activate/deactivate poetry environment
 ```sh
 poetry shell
 
 source ./.venv/bin/activate
 deactivate
+```
+
+## Run python program
+```sh
+poetry run python [program_name.py]
 ```
